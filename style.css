@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+margin: 0;
+padding: 0;
+ box-sizing: border-box;
+ font-weight: 500;
+ font-family: "Montserrat", sans-serif;
+}
+:root{
+   --Green500: hsl(158, 36%, 37%);
+   --Green700: hsl(158, 42%, 18%);
+   --Black: hsl(212, 21%, 14%);
+   --Grey: hsl(228, 12%, 48%);
+   --Cream:#F2EBE3;
+   --White: hsl(0, 0%, 100%);
+}
+
+body{
+ min-height: 100svh;
+ width: 100%;
+ background-color: var(--Cream);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.mobile{
+  display: none;
+}
+.image .desk{
+  height: 100%;
+  width: 300px;
+}
+.container{
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 450px;
+  width:min(600px,90%);
+  display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+.text{
+  background-color: var(--White);
+  height: 100%;
+  padding: 30px ;
+}
+.perf{
+  color: gray;
+  margin-bottom:10px ;
+  letter-spacing: 4px;
+}
+h1{
+  margin-bottom: 13px;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+}
+.info{
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: var(--Grey);
+}
+.price{
+  font-size: 32px;
+  color: var(--Green700);
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: "Fraunces", sans-serif;
+}
+.price span{
+  display: inline-block;
+  text-decoration:line-through;
+  font-size: 14px;
+  color: gray;
+  font-weight: 500;
+font-family: "Montserrat", sans-serif;
+  transform: translate(15px,-4px);
+}
+button{
+  height: 50px;
+  color: white;
+  background-color: var(--Green500);
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  transition: .5s;
+}
+button:hover{
+  background-color: var(--Green700);
+}
+i{
+  display: inline-block;
+  margin-right: 20px;
+  transform: translateY(3px);
+}
+@media (max-width:376px){
+  .container{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin:20px 0 20px 0;
+  }
+  .desk{
+    display: none;
+  }
+  .mobile{
+    display: block;
+   min-height: 100%;
+   width: 100%;
+  }
+}
